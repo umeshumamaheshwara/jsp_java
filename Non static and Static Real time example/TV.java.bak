@@ -1,0 +1,31 @@
+class  TV
+{
+	int Cost;
+	String TV_type;
+	static String Brand = "TCL";
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("TV Brand is : " + Brand);
+		TV T1 = new TV();
+		TV T2 = new TV();
+		
+		T1.Cost = 300000;
+		T2.TV_type =  "Petrol";	
+		
+		System.out.println("Umesh Car Cost is: " + T1.Cost);
+		System.out.println("Umesh Car Color is : " + T2.TV_type);
+		
+		T1.Cost = 350000;
+		T2.TV_type  =  "Disel";	
+		
+		System.out.println("Ramesh Car Cost is: " +  T1.Cost);
+		System.out.println("Ramesh Car Color is: " + T2.TV_type);
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,30 @@
+class  Homes
+{
+	int Home_Cost;
+	String Home_Color;
+	static String Home_Name= " Shree ";
+	
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("House Name is : " + Home_Name);
+		Homes H1 = new Homes();
+		Homes H2 = new Homes();
+		
+		H1.Home_Cost = 30000;
+		H2.Home_Color =  "Blue";	
+		
+		System.out.println(" Home Cost is: " + H1.Home_Cost);
+		System.out.println(" Home  Color is : " + H2.Home_Color );
+		
+		H1.Home_Cost = 35000;
+		H2.Home_Color =  "Black";	
+		
+		System.out.println(" Home  Cost is: " + H1.Home_Cost);
+		System.out.println(" Home Color is: " + H2.Home_Color );
+		
+		
+		
+		
+	}
+}

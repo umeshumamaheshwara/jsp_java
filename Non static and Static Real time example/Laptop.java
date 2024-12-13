@@ -1,0 +1,30 @@
+class  Laptop
+{
+	int Laptop_Cost;
+	String Laptop_Name;
+	static String Laptop_Brand = " Acer ";
+	
+	public static void main(String[] args) 
+	{
+		
+		System.out.println(" Laptop Brand : " + Laptop_Brand);
+		Laptop L1 = new Laptop();
+		Laptop L2 = new Laptop();
+		
+		L1. Laptop_Cost = 50000;
+		L2.Laptop_Name =  "Acer A515-54";	
+		
+		System.out.println(" Laptop Cost is: " + L1. Laptop_Cost );
+		System.out.println(" Laptop  Name is : " + L2.Laptop_Name  );
+		
+		L1. Laptop_Cost = 80000;
+		L2.Laptop_Name =  "Aspire";	
+		
+		System.out.println(" Laptop  Cost is: " + L1. Laptop_Cost);
+		System.out.println(" Laptop Name is: " + L2.Laptop_Name );
+		
+		
+		
+		
+	}
+}

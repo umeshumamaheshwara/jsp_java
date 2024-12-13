@@ -1,0 +1,30 @@
+class  Mobile
+{
+	int Mobile_Cost;
+	String Mobile_Color;
+	static String Mobile_Model_Name= "Samsung";
+	
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("Mobile Brand is : " + Mobile_Model_Name);
+		Mobile M1 = new Mobile();
+		Mobile M2 = new Mobile();
+		
+		M1.Mobile_Cost = 30000;
+		M2.Mobile_Color =  "Blue";	
+		
+		System.out.println("Umesh Mobiles Cost is: " + M1.Mobile_Cost);
+		System.out.println("Umesh Mobiles Color is : " + M2.Mobile_Color);
+		
+		M1.Mobile_Cost = 35000;
+		M2.Mobile_Color =  "Black";	
+		
+		System.out.println("Ramesh Mobiles Cost is: " + M1.Mobile_Cost);
+		System.out.println("Ramesh Mobiles Color is: " + M2.Mobile_Color);
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,26 @@
+class University
+{
+	static String University_Name = "VTU";
+	String Course_name;
+	int Cost;
+	public static void main(String[] args) 
+	{
+	    
+		System.out.println("University Name is : " + University_Name);
+		University U1 = new University();
+		University  U2 = new University();
+		
+		U1.Course_name = "MCA";
+		U2.Cost =  2000 ;	
+		
+		System.out.println(" Cousre :   " + 	U1.Course_name);
+		System.out.println(" Exam Fee : " + 	U2.Cost);
+		
+		U1.Course_name = "MBA";
+		U2.Cost =  1500 ;	
+		
+		System.out.println(" Cousre : " + 	U1.Course_name);
+		System.out.println(" Exam Fee " + 	U2.Cost);
+		
+	}
+}

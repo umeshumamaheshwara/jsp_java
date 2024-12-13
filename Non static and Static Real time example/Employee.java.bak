@@ -1,0 +1,30 @@
+class  Employee
+{
+	String Emp_id;
+	int Emp_Sal;
+	static String Emp_Grade = " A ";
+	
+	public static void main(String[] args) 
+	{
+		
+		System.out.println(" Employee Grade : " + Emp_Grade );
+		Employee E1 = new Employee();
+		Employee E2 = new Employee();
+		
+		E1.Emp_id = "A01";
+		E2.Emp_Sal =  50000;	
+		
+		System.out.println(" Employee Id : " + E1.Emp_id );
+		System.out.println(" Employee Salary : " + E2.Emp_Sal  );
+		
+		E1.Emp_id = "A02";
+		E2.Emp_Sal = 50000;	
+		
+		System.out.println(" Employee Id : " + E1.Emp_id);
+		System.out.println(" Employee Salary : " + E2.Laptop_Name );
+		
+		
+		
+		
+	}
+}
