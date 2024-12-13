@@ -1,0 +1,26 @@
+class  Area
+{ 
+	int area()
+	{
+
+		int b=5;
+		int h=5;
+		double result=b*h;
+		return result;
+		
+	}
+}
+class Rectangle
+{
+
+		
+	public static void main(String[] args) 
+	{
+		Area s1 = new Area();
+		int x = s1.area();
+		System.out.println("Area of the Rectangle" + x);
+		
+	}
+
+}
+
