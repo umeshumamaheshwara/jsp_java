@@ -15,9 +15,6 @@ class sample1  implements Lamda
 	
 }
 
-
-
-
 public class LamdaEXPBASICINTERFACE {
 	public static void main(String[] args) {
 		sample1 s1 = new sample1();
