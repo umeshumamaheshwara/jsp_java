@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+</head>
+<body>
+
+
+<div align="center">
+<h1 id="head">Task</h1>
+<a href="/otp"><button >OTP</button></a>
+<a href="/time"><button >Time</button></a>
+
+<form action="/print">
+<input type="text" name="link">
+<button>Print</button>
+
+</form>
+<br><br>
+<form action="/circle">
+<h3>Size And color of the Circle:</h3>
+
+<br>
+
+<input type="text" name="color" placeholder="Enter the color">
+<input type="text" name="size" th:value="${size}"  placeholder="Enter the size">
+<button>Print</button>
+</form>
+
+<div>
+
+
+
+</div>
+</div>
+
+
+<div align="center">
+		<h1>Results</h1>
+		<h1 th:if="${otp}" th:text="'The OTP is: '+${otp}"></h1>
+		<h1 th:if="${time}" th:text="'The TIME is: '+${time}"></h1>
+		<img th:if="${link}" alt="" th:src="${link}" height="400px" width="600px">
+		
+		
+		
+		<div
+		 th:if ="${size}" th:style="'border-radius: 50%; height:'+${size}+'px; width:'+${size}+'px;background-color:'+${color}+'; border:2px solid black'">
+		</div>
+	</div>
+</body>
+</html>
