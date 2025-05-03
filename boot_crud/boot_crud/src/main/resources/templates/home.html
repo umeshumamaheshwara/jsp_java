@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style >
+.container{
+margin:auto;
+height:500px;
+width:500px;
+background-color: red;
+border: 2px solid black;
+
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>CRUD OPERATION</h1>
+<h3 th:if="${message}" th:text="${message}"></h3>
+
+   <a href="/insert"><button>INSERT RECORD</button> </a>
+   <a href="/fetch"><button>FETCH RECORD</button></a>    
+</div>
+</body>
+</html>
