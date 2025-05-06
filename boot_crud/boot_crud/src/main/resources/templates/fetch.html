@@ -8,32 +8,39 @@
 
 <div align="center">
 <h1>STUDENT RECORDS</h1>
-<hr>
 
-<div th:each="s:${students}">
-<h2 th:text="'Name:' + ${s.name}"></h2>
-<h2 th:text="'Mobile:' + ${s.mobile}"></h2>
-<h2 th:text="'Email:' + ${s.email}"></h2>
-<h2 th:text="'Percentage:' + ${s.percentage}"></h2>
-</div>
-</div>
 
-<table border=2px>
+<h1 align="center">Student Details</h1>
+<form action="/fetch" align="center"> 
+<input type="text" name="search"><br><br>
+<button>search</button> 
+</from><br>
+
+ 
+
+<table border=2px  align="center">
 <tr>
 <th>NAME </th>
 <th>MOBILE </th>
 <th>EMAIL</th>
 <th>PERCENTAGE </th>
 </tr>
-<tr th:each="s:${students}">
-<td th:text=" ${s.name}"> </td>
-<td th:text="  ${s.mobile}"> </td>
-<td th:text=" ${s.email}"> </td>
+<tr th:each="s: ${students}">
+<td th:text="${s.name}"> </td>
+<td th:text="${s.mobile}"> </td>
+<td th:text="${s.email}"> </td>
 <td th:text="${s.percentage}"> </td>
+<td>
 
+<a th:href="'/edit/'+${s.id}"> <button type="button"> EDIT </button> </a> 
+ 
+ <a th:href="'/delete/'+${s.id}">   <button type="button"> DELETE </button> </a>
+ </td>
  </tr>
 </table>
 
 
+<hr>
+<h3 th:if="${message}" th:text="${message}"></h3>
 </body>
 </html>

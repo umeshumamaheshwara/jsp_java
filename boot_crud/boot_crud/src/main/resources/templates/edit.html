@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EDIT</title>
+</head>
+<body>
+<div align="center">
+
+<form action="/update"  method="post" >
+
+<input type="hidden" name="id" th:value="${student.id}"  /><br><br>
+
+
+
+<label for="Name">ENTER THE NAME :</label>
+<input type="text" placeholder="Enter the Name:" id="Name" name="name" th:value="${student.name}"><br><br>
+
+<label for="Mobile">MOBILE NUMBER :</label>
+<input type="tel" max=10 placeholder="Mobile Number:" id="Mobile" name="mobile" th:value="${student.mobile}"><br><br>
+
+<label for="Email">Email :</label>
+<input type="email"  placeholder="Email Address :" id="Email" name="email" th:value="${student.email}"><br><br>
+
+<label for="Percentage">Percentage :</label>
+<input type="text"  placeholder="Percentage :" id="Percentage" name="percentage" th:value="${student.percentage}"><br><br>
+ 
+<button>UPDATE RECORD</button>
+
+</form>
+<br>
+<a href="/fetch"><button>BACK</button></a>
+
+</div>
+
+</body>
+</html>
