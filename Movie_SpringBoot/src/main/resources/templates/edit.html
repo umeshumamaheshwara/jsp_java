@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Movie</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #444;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .button-group {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e7e34;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Edit Movie Details</h2>
+    <form action="/update" method="post">
+
+      <!-- Hidden input to carry movie ID -->
+      <input type="hidden" name="id" th:value="${movie.id}"><br><br>
+
+      <label for="Name">Movie Name:</label>
+      <input type="text" id="Name" name="name" th:value="${movie.name}">
+
+      <label for="Description">Description:</label>
+      <input type="text" id="Description" name="description" th:value="${movie.description}">
+
+      <label for="Actor">Actor:</label>
+      <input type="text" id="Actor" name="actor" th:value="${movie.actor}">
+
+      <label for="Actress">Actress:</label>
+      <input type="text" id="Actress" name="actress" th:value="${movie.actress}">
+
+      <label for="Image">Image Link:</label>
+      <input type="text" id="Image" name="imagelink" th:value="${movie.imagelink}">
+
+      <label for="Trailer">Trailer Link:</label>
+      <input type="text" id="Trailer" name="trailerlink" th:value="${movie.trailerlink}">
+
+      <label for="Rating">Rating (%):</label>
+      <input type="text" id="Rating" name="rating" th:value="${movie.rating}">
+
+      <div class="button-group">
+        <button type="submit">Update</button>
+        <a href="/fetch"><button type="button">Cancel</button></a>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>

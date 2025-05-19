@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert Movie</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8ffae, #43c6ac);
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #444;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .button-group {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Insert Movie Details</h2>
+    <form action="/insert" method="post">
+
+      <label for="Name">Movie Name:</label>
+      <input type="text" placeholder="Enter Movie Name" id="Name" name="name">
+
+      <label for="Description">Description:</label>
+      <input type="text" placeholder="Enter Description" id="Description" name="description">
+
+      <label for="Actor">Actor:</label>
+      <input type="text" placeholder="Enter Actor Name" id="Actor" name="actor">
+
+      <label for="Actress">Actress:</label>
+      <input type="text" placeholder="Enter Actress Name" id="Actress" name="actress">
+
+      <label for="Image">Image Link:</label>
+      <input type="text" placeholder="Enter Image URL" id="Image" name="imagelink">
+
+      <label for="Trailer">Trailer Link:</label>
+      <input type="text" placeholder="Enter Trailer URL" id="Trailer" name="trailerlink">
+
+      <label for="Rating">Rating (%):</label>
+      <input type="text" placeholder="Enter Rating Percentage" id="Rating" name="rating">
+
+      <div class="button-group">
+        <button type="submit">Add</button>
+        <a href="/"><button type="button">Back</button></a>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>

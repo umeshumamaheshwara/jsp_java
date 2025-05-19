@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fetch</title>
+</head>
+<body>
+
+<div align="center">
+<h1>Movie Records</h1>
+
+
+<h1 align="center">Details</h1>
+<form action="/fetch" align="center"> 
+<input type="text" name="search"><br><br>
+<button>search</button> 
+</from><br>
+
+ 
+
+<table border=2px  align="center">
+<tr>
+<th>NAME </th>
+<th>Description </th>
+<th>Actor</th>
+<th>Actress </th>
+<th>ImageLink</th>
+<th>TrailerLink</th>
+<th>Rating</th>
+</tr>
+<tr th:each="m: ${movies}">
+<td th:text="${m.name}"> </td>
+<td th:text="${m.description}"> </td>
+<td th:text="${m.actor}"> </td>
+<td th:text="${m.actress}"> </td>
+<td th:text="${m.imagelink}"> </td>
+<td th:text="${m.trailerlink}"> </td>
+<td th:text="${m.rating}"> </td>
+<td>
+
+<a th:href="'/edit/'+${m.id}"> <button type="button"> EDIT </button> </a> 
+ 
+ <a th:href="'/delete/'+${m.id}">   <button type="button"> DELETE </button> </a>
+ </td>
+ </tr>
+</table>
+
+
+<hr>
+<h3 th:if="${message}" th:text="${message}"></h3>
+</body>
+</html>
